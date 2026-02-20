@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>probabilida y ESTADISTICA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    
+
+    <header>
+        <div class="logo"><span>provabilidad</span> y estadistica</div>
+        <nav>
+            <a href="#discreto">Discretos</a>
+            <a href="#continuo">Continuos</a>
+            <a href="#cualitativo">Cualitativos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <h1>Estudio de Mercado y Población</h1>
+            <p>Análisis estadístico de muestra aleatoria (n=100) en diferentes contextos.</p>
+        </div>
+
+        <h2>Ejemplos de Variables Estadísticas</h2>
+    <p class="intro">En estadística, los datos se clasifican según su naturaleza. A continuación, se presentan ejemplos de 100 datos para variables discretas, continuas y cualitativas.</p>
+
+    <div class="container">
+        
+        <div class="card discrete">
+            <h2>1. Variable Cuantitativa Discreta</h2>
+            <p><strong>Definición:</strong> Son valores numéricos que resultan de un conteo. No admiten valores intermedios (decimales) entre dos números enteros.</p>
+            <p><strong>Ejemplo:</strong> Número de hijos en 100 familias encuestadas.</p>
+            <div class="data-box" id="data-discrete">
+                </div>
+        </div>
+
+        <div class="card continuous">
+            <h2>2. Variable Cuantitativa Continua</h2>
+            <p><strong>Definición:</strong> Son valores numéricos que resultan de una medición. Pueden tomar cualquier valor dentro de un intervalo (admiten decimales).</p>
+            <p><strong>Ejemplo:</strong> Distancia en kilometros (km) de 100 corredores.</p>
+            <div class="data-box" id="data-continuous">
+                </div>
+        </div>
+
+        <div class="card qualitative">
+            <h2>3. Variable Cualitativa (Categórica)</h2>
+            <p><strong>Definición:</strong> Expresan características, cualidades o categorías que no pueden ser medidas con números. Pueden ser nominales u ordinales.</p>
+            <p><strong>Ejemplo:</strong> Plataforma de streaming favorita de 100 usuarios.</p>
+            <div class="data-box" id="data-qualitative">
+                </div>
+        </div>
+
+    </div>
+
+        <section id="discreto" class="card">
+            <div class="card-header">
+                <div class="icon-box icon-disc">👨‍👩‍👧</div>
+                <div class="card-title">
+                    <h2>Hijos por Familia</h2>
+                    <span>Variable Discreta (Enteros)</span>
+                </div>
+            </div>
+            
+            <p style="margin-bottom: 20px; color: #666;">Datos recolectados de un censo local preguntando el número de hijos en 100 hogares.</p>
+
+            <h4 style="color: #6c5ce7;">1.1 Matriz de Datos</h4>
+            <div class="table-scroll">
+                <table class="matrix-table">
+                    <tbody>
+                        <tr><td>2</td><td>1</td><td>0</td><td>3</td><td>2</td><td>1</td><td>4</td><td>2</td><td>0</td><td>1</td></tr>
+                        <tr><td>1</td><td>2</td><td>3</td><td>0</td><td>2</td><td>2</td><td>1</td><td>2</td><td>3</td><td>2</td></tr>
+                        <tr><td>0</td><td>1</td><td>2</td><td>4</td><td>2</td><td>1</td><td>0</td><td>3</td><td>2</td><td>1</td></tr>
+                        <tr><td>3</td><td>2</td><td>1</td><td>2</td><td>0</td><td>2</td><td>1</td><td>2</td><td>2</td><td>3</td></tr>
+                        <tr><td>1</td><td>0</td><td>2</td><td>1</td><td>3</td><td>2</td><td>0</td><td>2</td><td>1</td><td>2</td></tr>
+                        <tr><td>2</td><td>1</td><td>0</td><td>2</td><td>3</td><td>1</td><td>4</td><td>2</td><td>1</td><td>2</td></tr>
+                        <tr><td>1</td><td>2</td><td>3</td><td>2</td><td>0</td><td>1</td><td>2</td><td>3</td><td>2</td><td>1</td></tr>
+                        <tr><td>0</td><td>1</td><td>4</td><td>2</td><td>1</td><td>3</td><td>2</td><td>0</td><td>2</td><td>1</td></tr>
+                        <tr><td>2</td><td>3</td><td>1</td><td>2</td><td>2</td><td>1</td><td>2</td><td>3</td><td>4</td><td>2</td></tr>
+                        <tr><td>1</td><td>2</td><td>0</td><td>1</td><td>2</td><td>3</td><td>1</td><td>2</td><td>0</td><td>1</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <br>
+            <h4 style="color: #6c5ce7;">1.2 Frecuencias</h4>
+            <div class="table-scroll">
+                <table class="freq-table">
+                    <thead>
+                        <tr>
+                            <th>N° Hijos</th>
+                            <th>(fa)</th>
+                            <th>(fr)</th>
+                            <th>(facum)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0 Hijos</td><td>14</td><td>0.14%</td><td> 0.14 </td></tr>
+                        <tr><td>1 Hijo</td><td>28</td><td>0.28%</td><td> 0.42 </td></tr>
+                        <tr><td>2 Hijos</td><td>39</td><td>0.39%</td><td> 0.81 </td></tr>
+                        <tr><td>3 Hijos</td><td>14</td><td>0.14%</td><td> 0.95 </td></tr>
+                        <tr><td>4 Hijos</td><td>5</td><td>0.05%</td><td> 1.0 </td></tr>
+                        <tr class="total-row"><td>TOTAL</td><td>100</td><td>100%</td><td></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="continuo" class="card">
+            <div class="card-header">
+                <div class="icon-box icon-cont">🏃</div>
+                <div class="card-title">
+                    <h2>Rendimiento de Corredores</h2>
+                    <span>Variable Continua (Km)</span>
+                </div>
+            </div>
+
+            <p style="margin-bottom: 20px; color: #666;">Distancia en kilómetros recorrida por 100 atletas en 30 minutos (datos con decimales).</p>
+
+            <h4 style="color: #00b894;">2.1 Matriz de Mediciones</h4>
+            <div class="table-scroll">
+                <table class="matrix-table">
+                    <tbody>
+                        <tr><td>5.20</td><td>6.10</td><td>4.80</td><td>5.50</td><td>6.80</td><td>5.10</td><td>4.90</td><td>6.20</td><td>5.70</td><td>5.40</td></tr>
+                        <tr><td>5.90</td><td>4.60</td><td>6.50</td><td>4.70</td><td>5.30</td><td>6.10</td><td>4.80</td><td>6.40</td><td>5.60</td><td>6.70</td></tr>
+                        <tr><td>5.10</td><td>6.30</td><td>5.05</td><td>4.90</td><td>6.00</td><td>6.90</td><td>4.50</td><td>5.80</td><td>5.20</td><td>6.05</td></tr>
+                        <tr><td>6.20</td><td>4.80</td><td>5.40</td><td>6.60</td><td>5.10</td><td>5.70</td><td>4.90</td><td>6.10</td><td>6.80</td><td>4.70</td></tr>
+                        <tr><td>5.30</td><td>6.10</td><td>5.50</td><td>5.90</td><td>6.70</td><td>4.90</td><td>6.08</td><td>5.02</td><td>4.60</td><td>6.30</td></tr>
+                        <tr><td>5.08</td><td>6.60</td><td>5.20</td><td>4.80</td><td>5.60</td><td>6.20</td><td>5.10</td><td>6.50</td><td>5.80</td><td>4.50</td></tr>
+                        <tr><td>6.02</td><td>5.40</td><td>6.80</td><td>5.20</td><td>4.70</td><td>5.90</td><td>5.10</td><td>4.90</td><td>6.30</td><td>6.90</td></tr>
+                        <tr><td>4.60</td><td>6.10</td><td>5.30</td><td>6.50</td><td>5.40</td><td>4.80</td><td>6.20</td><td>5.05</td><td>6.80</td><td>5.10</td></tr>
+                        <tr><td>5.70</td><td>6.70</td><td>5.20</td><td>5.80</td><td>4.70</td><td>6.10</td><td>5.30</td><td>4.90</td><td>6.40</td><td>6.60</td></tr>
+                        <tr><td>5.10</td><td>5.60</td><td>6.50</td><td>5.30</td><td>6.05</td><td>4.80</td><td>6.30</td><td>5.50</td><td>4.60</td><td>5.90</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <br>
+            <h4 style="color: #00b894;">2.2 Intervalos de Distancia</h4>
+            <div class="table-scroll">
+                <table class="freq-table">
+                    <thead>
+                        <tr>
+                            <th> clase</th>
+                            <th>limite inferior</th>
+                            <th>limite superior</th>
+                            <th>marca de clase</th>
+                            <th>fa</th>
+                            <th>fr</th>
+                            <th>facum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0</td><td>4.50</td><td>4.80</td><td>4.65</td><td>10</td><td>0.10</td><td>0.10</td></tr>
+                        <tr><td>1</td><td>4.80</td><td>5.10</td><td>4.95</td><td>16</td><td>0.16</td><td>0.26</td></tr>
+                        <tr><td>2</td><td>5.10</td><td>5.40</td><td>5.25</td><td>17</td><td>0.17</td><td>0.43</td></tr>
+                        <tr><td>3</td><td>5.40</td><td>5.70</td><td>5.55</td><td>10</td><td>0.10</td><td>0.53</td></tr>
+                        <tr><td>4</td><td>5.70</td><td>6.00</td><td>5.85</td><td>10</td><td>0.10</td><td>0.63</td></tr>
+                        <tr><td>5</td><td>6.00</td><td>6.30</td><td>6.15</td><td>15</td><td>0.15</td><td>0.78</td></tr>
+                        <tr><td>6</td><td>6.30</td><td>6.60</td><td>6.45</td><td>10</td><td>0.10</td><td>0.88</td></tr>
+                        <tr><td>7</td><td>6.60</td><td>6.90</td><td>6.75</td><td>10</td><td>0.10</td><td>0.98</td></tr>
+
+                        <tr class="total-row"><td>TOTAL</td><td>---</td><td>---</td><td>---</td><td>100</td><td>1</td><td></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="cualitativo" class="card">
+            <div class="card-header">
+                <div class="icon-box icon-cual">📺</div>
+                <div class="card-title">
+                    <h2>Streaming Favorito</h2>
+                    <span>Variable Cualitativa (Categorías)</span>
+                </div>
+            </div>
+
+            <p style="margin-bottom: 20px; color: #666;">Encuesta sobre la plataforma principal utilizada por 100 usuarios.</p>
+
+            <h4 style="color: #ff7675;">3.1 Respuestas (Log)</h4>
+            <div class="table-scroll">
+                <table class="matrix-table" style="font-size: 0.75rem;">
+                    <tbody>
+                        <tr><td>Netflix</td><td>Disney+</td><td>HBO</td><td>Netflix</td><td>Prime</td><td>Netflix</td><td>HBO</td><td>Disney+</td><td>Netflix</td><td>Netflix</td></tr>
+                        <tr><td>HBO</td><td>Netflix</td><td>Prime</td><td>Disney+</td><td>Netflix</td><td>HBO</td><td>Netflix</td><td>Prime</td><td>HBO</td><td>Disney+</td></tr>
+                        <tr><td>Netflix</td><td>HBO</td><td>Netflix</td><td>Netflix</td><td>Disney+</td><td>Prime</td><td>HBO</td><td>Netflix</td><td>Disney+</td><td>Netflix</td></tr>
+                        <tr><td>Prime</td><td>Netflix</td><td>HBO</td><td>Disney+</td><td>Netflix</td><td>HBO</td><td>Netflix</td><td>Netflix</td><td>Prime</td><td>HBO</td></tr>
+                        <tr><td>Disney+</td><td>HBO</td><td>Netflix</td><td>Prime</td><td>Netflix</td><td>Disney+</td><td>Netflix</td><td>HBO</td><td>Netflix</td><td>Disney+</td></tr>
+                        <tr><td>Netflix</td><td>Prime</td><td>HBO</td><td>Netflix</td><td>Disney+</td><td>Netflix</td><td>HBO</td><td>Prime</td><td>Netflix</td><td>HBO</td></tr>
+                        <tr><td>HBO</td><td>Netflix</td><td>Disney+</td><td>Netflix</td><td>Prime</td><td>HBO</td><td>Netflix</td><td>Disney+</td><td>Netflix</td><td>Prime</td></tr>
+                        <tr><td>Disney+</td><td>HBO</td><td>Netflix</td><td>Prime</td><td>Netflix</td><td>HBO</td><td>Disney+</td><td>Netflix</td><td>HBO</td><td>Netflix</td></tr>
+                        <tr><td>Netflix</td><td>Disney+</td><td>Prime</td><td>HBO</td><td>Netflix</td><td>Disney+</td><td>HBO</td><td>Netflix</td><td>Prime</td><td>Disney+</td></tr>
+                        <tr><td>HBO</td><td>Netflix</td><td>Disney+</td><td>Netflix</td><td>HBO</td><td>Prime</td><td>Netflix</td><td>HBO</td><td>Disney+</td><td>Netflix</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <br>
+            <h4 style="color: #ff7675;">3.2 Participación de Mercado</h4>
+            <div class="table-scroll">
+                <table class="freq-table">
+                    <thead>
+                        <tr>
+                            <th>Plataforma</th>
+                            <th>fa</th>
+                            <th>fr</th>
+                            <th>facum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Disney+</td><td>20</td><td>0.20</td><td>0.20</td></tr>
+                        <tr><td>HBO Max</td><td>25</td><td>0.25</td><td>0.45</td></tr>
+                        <tr><td>Netflix</td><td>40</td><td>0.40</td><td>0.85</td></tr>
+                        <tr><td>Amazon Prime</td><td>15</td><td>0.15</td><td>1.00</td></tr>
+                        <tr class="total-row"><td>TOTAL</td><td>100</td><td>1</td><td></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
