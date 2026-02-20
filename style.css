@@ -1,0 +1,199 @@
+ /* --- VARIABLES Y RESET --- */
+        :root {
+            --bg-color: #f0f2f5;
+            --card-bg: #ffffff;
+            --text-primary: #2d3436;
+            --text-secondary: #636e72;
+            
+            /* Gradientes */
+            --grad-disc: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            --grad-cont: linear-gradient(135deg, #00b894, #55efc4);
+            --grad-cual: linear-gradient(135deg, #ff7675, #fab1a0);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* --- HEADER FLOTANTE --- */
+        header {
+            background: white;
+            padding: 20px 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #2d3436;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo span {
+            background: #2d3436;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 6px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            margin-left: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: #6c5ce7; }
+
+        /* --- LAYOUT PRINCIPAL --- */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .intro h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .intro p { color: var(--text-secondary); }
+
+        /* --- TARJETAS (SECCIONES) --- */
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.02);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f2f5;
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Colores de Iconos */
+        .icon-disc { background: var(--grad-disc); }
+        .icon-cont { background: var(--grad-cont); }
+        .icon-cual { background: var(--grad-cual); }
+
+        .card-title h2 { margin: 0; font-size: 1.5rem; }
+        .card-title span { font-size: 0.85rem; color: var(--text-secondary); font-weight: 400; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* --- TABLAS ESTILIZADAS --- */
+        .table-scroll {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid #6789bd;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th {
+            text-align: left;
+            padding: 18px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            background-color: #6789bd;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 15px 18px;
+            border-top: 1px solid #6789bd;
+            font-size: 0.95rem;
+        }
+
+        /* Estilo Matriz de Datos (Cuadrícula) */
+        .matrix-table td {
+            text-align: center;
+            border: 1px solid #f0f2f5;
+            color: #b2bec3;
+            font-family: monospace; /* Para alinear números */
+        }
+        .matrix-table td:hover {
+            background-color: #dfe6e9;
+            color: #2d3436;
+            font-weight: bold;
+            cursor: crosshair;
+        }
+
+        /* Estilo Tabla Frecuencias */
+        .freq-table tbody tr:hover { background-color: #fafafa; }
+        
+        .total-row {
+            background-color: #fdfdfd;
+            font-weight: bold;
+            border-top: 2px solid #dfe6e9 !important;
+        }
+
+        /* Badges (Etiquetas de color) */
+        .badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        /* Colores para categorías */
+        .bg-netflix { background-color: #ffeaa7; color: #d35400; }
+        .bg-disney { background-color: #74b9ff; color: #0984e3; }
+        .bg-hbo { background-color: #a29bfe; color: #6c5ce7; }
+        .bg-prime { background-color: #55efc4; color: #00b894; }
+
+        /* Barra simple */
+        .simple-bar {
+            height: 8px;
+            border-radius: 4px;
+            background-color: #eee;
+            overflow: hidden;
+        }
+        .bar-fill { height: 100%; border-radius: 4px; }
+
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; flex-direction: column; gap: 10px; }
+            nav a { margin: 0 10px; }
+            .card { padding: 20px; }
+        }
